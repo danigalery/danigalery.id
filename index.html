@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dani Galeri Jepara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dani.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp-float">
+        <img src="whatsapp.png" alt="WhatsApp" width="50" height="50">
+    </a>    
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dani Galery Jepara</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonial">Testimonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <!-- Search Form -->
+                <form id="searchForm" class="d-flex ms-3">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Cari produk..." aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+
+                <!-- JavaScript -->
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const searchForm = document.getElementById("searchForm");
+                        const searchInput = document.getElementById("searchInput");
+                        
+                        // Daftar kata kunci dan ID kategori yang sesuai
+                        const categoryKeywords = {
+                            "furniture stainless": "#furniture-stainless",
+                            "stainless": "#furniture-stainless",
+                            "meja konsul": "#furniture-stainless",
+                            "bufet": "#bufet",
+                            "sofa": "#sofa",
+                            "dipan clasic": "#dipan",
+                            "dipan": "#dipan",
+                            "almari pakaian": "#almari",
+                            "almari": "#almari"
+                        };
+                    
+                        searchForm.addEventListener("submit", function(event) {
+                            event.preventDefault(); // Mencegah reload halaman saat form di-submit
+                            
+                            // Ambil nilai input dan ubah menjadi huruf kecil
+                            const query = searchInput.value.trim().toLowerCase();
+                            
+                            // Cek apakah kata kunci sesuai dengan kategori
+                            if (query && categoryKeywords[query]) {
+                                // Arahkan ke ID kategori yang sesuai
+                                window.location.href = categoryKeywords[query];
+                            } else if (query) {
+                                alert("Kategori tidak ditemukan. Coba kata kunci yang lain.");
+                            } else {
+                                alert("Silakan masukkan kata kunci pencarian.");
+                            }
+                        });
+                    });
+                    </script>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home" class="text-center">
+        <div class="container">
+            <h1>Dani Galery Jepara</h1>
+            <p class="lead">Karya terbaik dari Jepara untuk hunian impian anda</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Tentang Kami</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="about-us.jpg" alt="Tentang Kami" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <p>Selamat datang di Dani Galeri Jepara, tempat di mana keindahan dan kualitas furniture Jepara berpadu dalam setiap produk yang kami tawarkan. Kami adalah penyedia furniture online terpercaya yang menghadirkan berbagai pilihan furniture berkualitas tinggi untuk melengkapi kebutuhan hunian Anda, mulai dari console table, bed, dining table, hingga sofa ruang tamu.</p>
+                    <p>Dengan keahlian tangan pengrajin lokal, setiap produk kami dibuat dengan bahan kayu pilihan yang teruji kekuatannya dan memiliki desain elegan yang mengutamakan estetika serta kenyamanan. Dani Galeri Jepara berkomitmen untuk menghadirkan produk-produk dengan standar kualitas terbaik yang mampu memberikan nilai lebih untuk ruang Anda.</p>
+                    <p>Temukan pilihan furniture terbaik dan percayakan kebutuhan furniture Anda kepada Dani Galeri Jepara, karena kami hadir untuk memberikan solusi interior yang sempurna dengan sentuhan seni dan budaya Jepara yang autentik.</p>
+                    <p>Untuk pemesanan product custom, langsung chat admin via WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Produk Kami</h2>
+
+
+    <!-- Kategori Produk -->
+    <div class="row mb-4">
+        <div class="text-center mb-4">
+            <h3>Kategori Produk</h3>
+            <ul class="list-inline text-center">
+                <li class="list-inline-item"><a href="#furniture-stainless" class="btn btn-outline-primary">Furniture Stainless</a></li>
+                <li class="list-inline-item"><a href="#bufet" class="btn btn-outline-primary">Bufet</a></li>
+                <li class="list-inline-item"><a href="#sofa" class="btn btn-outline-primary">Sofa</a></li>
+                <li class="list-inline-item"><a href="#dipan" class="btn btn-outline-primary">Dipan Clasic</a></li>
+                <li class="list-inline-item"><a href="#almari" class="btn btn-outline-primary">Almari Pakaian</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Kategori Produk: Furniture Stainless -->
+    <div id="furniture-stainless" class="text-center mb-5">
+        <div class="text-center mb-4">
+            <h4>Furniture Stainless</h4>
+        </div>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="konsul1.jpg" class="card-img-top" alt="Meja Konsul Stainless Cincin">
+                    <div class="card-body">
+                        <h5 class="card-title">Meja Konsul Stainless Cincin</h5>
+                        <p class="card-text">Rp 5.900.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>130 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>40 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>80 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="konsul2.jpg" class="card-img-top" alt="Meja Konsul Round Stainless">
+                    <div class="card-body">
+                        <h5 class="card-title">Meja Konsul Round Stainless</h5>
+                        <p class="card-text">Rp 7.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>130 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>45 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>80 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="konsul3.jpg" class="card-img-top" alt="Meja Konsul Stainless Audy">
+                    <div class="card-body">
+                        <h5 class="card-title">Meja Konsul Stainless Audy</h5>
+                        <p class="card-text">Rp 8.000.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>140 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>40 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>80 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="CoffeTableModern.jpg" class="card-img-top" alt="Coffe Table Modern Stainless">
+                    <div class="card-body">
+                        <h5 class="card-title">Coffe Table Modern Stainless</h5>
+                        <p class="card-text">Rp 4.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>100 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>50 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>55 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="MejaMakan1.jpeg" class="card-img-top" alt="Kabinet Stainless Minimalis">
+                    <div class="card-body">
+                        <h5 class="card-title">Meja Makan Round Stainless</h5>
+                        <p class="card-text">Rp 18.000.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">D<br><span>120 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>- cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>78 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="MejaMakan2.png" class="card-img-top" alt="Meja Makan Classic">
+                    <div class="card-body">
+                        <h5 class="card-title">Meja Makan Classic Stainless</h5>
+                        <p class="card-text">Rp 25.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>100 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>78 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="MejaMakan3.jpg" class="card-img-top" alt="Meja Makan Stainless">
+                    <div class="card-body">
+                        <h5 class="card-title">Meja Makan Luxury Top Marmer</h5>
+                        <p class="card-text">Rp 26.000.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>100 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>78 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="MejaMakan4.jpg" class="card-img-top" alt="Meja Makan">
+                    <div class="card-body">
+                        <h5 class="card-title">Meja Makan Stainless Cincin</h5>
+                        <p class="card-text">Rp 18.700.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>180 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>90 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>78 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kategori Produk: Bufet -->
+    <div id="bufet" class="text-center mb-5">
+        <div class="text-center mb-4">
+            <h4>Bufet</h4>
+        </div>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Bufet1.jpg" class="card-img-top" alt="Bufet Minimalis">
+                    <div class="card-body">
+                        <h5 class="card-title">Bufet Salur Minimalis</h5>
+                        <p class="card-text">Rp 3.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>120 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>40 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>80 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Bufet2.jpg" class="card-img-top" alt="Bufet Klasik">
+                    <div class="card-body">
+                        <h5 class="card-title">Bufet Minimalis Olympic</h5>
+                        <p class="card-text">Rp 5.800.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>160 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>45 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>80 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Bufet3.jpg" class="card-img-top" alt="Bufet Scandinavian">
+                    <div class="card-body">
+                        <h5 class="card-title">Bufet Cerendra Custom</h5>
+                        <p class="card-text">Rp 5.700.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>160 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>45 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>80 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="bufet4.jpg" class="card-img-top" alt="Bufet Kayu Jati">
+                    <div class="card-body">
+                        <h5 class="card-title">Bufet Sampagne Kaca Figura</h5>
+                        <p class="card-text">Rp 7.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>160 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>45 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>80 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="bufet5.jpg" class="card-img-top" alt="Bufet Vintage">
+                    <div class="card-body">
+                        <h5 class="card-title">Bufet Hello Kitty Classic</h5>
+                        <p class="card-text">Rp 6.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>180 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>45 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>80 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="bufet6.jpg" class="card-img-top" alt="Bufet Industrial">
+                    <div class="card-body">
+                        <h5 class="card-title">Bufet Custom Minimalis</h5>
+                        <p class="card-text">Rp 5.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>160 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>45 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>90 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="bufet7.jpg" class="card-img-top" alt="Bufet Mewah">
+                    <div class="card-body">
+                        <h5 class="card-title">Bufet Minimalis + figura kaca</h5>
+                        <p class="card-text">Rp 6.800.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>180 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>45 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>80 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Bufet8.jpg" class="card-img-top" alt="Bufet Elegan">
+                    <div class="card-body">
+                        <h5 class="card-title">Bufet Salur Modern Stainless Gold</h5>
+                        <p class="card-text">Rp 8.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>45 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>80 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kategori Produk: Sofa -->
+    <div id="sofa" class="text-center mb-5">
+        <div class="text-center mb-4">
+            <h4>Sofa</h4>
+        </div>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Sofa1.jpg" class="card-img-top" alt="Sofa Minimalis">
+                    <div class="card-body">
+                        <h5 class="card-title">Sofa Sandaran Custom</h5>
+                        <p class="card-text">Rp 6.850.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>220 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>80 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>110 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Sofa2.jpg" class="card-img-top" alt="Sofa Minimalis">
+                    <div class="card-body">
+                        <h5 class="card-title">Sofa Salur Shaby Black</h5>
+                        <p class="card-text">Rp 6.800.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>220 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>80 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>100 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Sofa3.jpg" class="card-img-top" alt="sofa">
+                    <div class="card-body">
+                        <h5 class="card-title">Sofa Shena Classic Custom</h5>
+                        <p class="card-text">Rp 6.200.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>220 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>80 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>110 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Sofa4.jpg" class="card-img-top" alt="Sofa">
+                    <div class="card-body">
+                        <h5 class="card-title">Sofa 2 Seat Shaby Custom</h5>
+                        <p class="card-text">Rp 4.200.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>160 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>80 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>90 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Sofa5.jpg" class="card-img-top" alt="sofa">
+                    <div class="card-body">
+                        <h5 class="card-title">Sofa Shabyhigs 1 Minimalis</h5>
+                        <p class="card-text">Rp 6.550.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>80 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>90 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Sofa6.jpg" class="card-img-top" alt="sofa">
+                    <div class="card-body">
+                        <h5 class="card-title">Shabbychig Soffa Minimalis</h5>
+                        <p class="card-text">Rp 6.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>80 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>100 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Sofa7.jpg" class="card-img-top" alt="sofa">
+                    <div class="card-body">
+                        <h5 class="card-title">Sofa Shaby Lengkung Custom</h5>
+                        <p class="card-text">Rp 6.800.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>220 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>80 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>100 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Sofa8.jpg" class="card-img-top" alt="sofa">
+                    <div class="card-body">
+                        <h5 class="card-title">Sofa Modern Salur 3 Seat</h5>
+                        <p class="card-text">Rp 6.200.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>210 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>80 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>95 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kategori Produk: Dipan -->
+    <div id="dipan" class="text-center mb-5">
+        <div class="text-center mb-4">
+            <h4>Dipan Clasic</h4>
+        </div>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Dipan1.jpg" class="card-img-top" alt="dipan">
+                    <div class="card-body">
+                        <h5 class="card-title">Tempat tidur cllasic shabby</h5>
+                        <p class="card-text">Rp 8.700.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>180 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Dipan2.jpg" class="card-img-top" alt="dipan">
+                    <div class="card-body">
+                        <h5 class="card-title">Tempat Tidur Cllasic Tosca/Custom</h5>
+                        <p class="card-text">Rp 9.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>180 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Dipan3.jpg" class="card-img-top" alt="dipan">
+                    <div class="card-body">
+                        <h5 class="card-title">Tempat Tidur Cllasic Mewah</h5>
+                        <p class="card-text">Rp 12.000.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>180 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Dipan4.jpg" class="card-img-top" alt="dipan">
+                    <div class="card-body">
+                        <h5 class="card-title">Tempat Tidur Pinky Cllasic</h5>
+                        <p class="card-text">Rp 9.200.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>180 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Dipan5.jpg" class="card-img-top" alt="dipan">
+                    <div class="card-body">
+                        <h5 class="card-title">Tempat Tidur King Custom</h5>
+                        <p class="card-text">Rp 11.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>180 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Dipan6.jpg" class="card-img-top" alt="Dipan">
+                    <div class="card-body">
+                        <h5 class="card-title">Tempat Tidur Raja Shabby</h5>
+                        <p class="card-text">Rp 9.800.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>180 cm</span></div></div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Dipan7.jpg" class="card-img-top" alt="dipan">
+                    <div class="card-body">
+                        <h5 class="card-title">Tempat Tidur Classic Sultan</h5>
+                        <p class="card-text">Rp 14.000.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>180 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Dipan8.jpg" class="card-img-top" alt="Dipan">
+                    <div class="card-body">
+                        <h5 class="card-title">Console Table Vintage</h5>
+                        <p class="card-text">Rp 9.000.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>180 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kategori Produk: Almari -->
+    <div id="almari" class="text-center mb-5">
+        <div class="text-center mb-4">
+            <h4>Almari Pakaian</h4>
+        </div>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Almari1.jpg" class="card-img-top" alt="Almari">
+                    <div class="card-body">
+                        <h5 class="card-title">almari pakaian pintu kaca tengah</h5>
+                        <p class="card-text">Rp 8.700.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>300 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>55 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>290 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Almari2.jpg" class="card-img-top" alt="almari">
+                    <div class="card-body">
+                        <h5 class="card-title">Almari Pakaian Cllasic Duco</h5>
+                        <p class="card-text">Rp 17.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>280 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>55 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>260 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Almari3.jpg" class="card-img-top" alt="almari">
+                    <div class="card-body">
+                        <h5 class="card-title">almari pakain minimalis jumbo</h5>
+                        <p class="card-text">Rp 12.000.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>300 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>55 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>320 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Almari4.jpg" class="card-img-top" alt="almari">
+                    <div class="card-body">
+                        <h5 class="card-title">Tempat Tidur Pinky Cllasic</h5>
+                        <p class="card-text">Rp 9.200.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>200 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>180 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>290 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Almari5.jpg" class="card-img-top" alt="almari">
+                    <div class="card-body">
+                        <h5 class="card-title">Almari Pakaian 3 Pintu Duco White</h5>
+                        <p class="card-text">Rp 10.500.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>160 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>55 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>200 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Almari6.jpg" class="card-img-top" alt="almari">
+                    <div class="card-body">
+                        <h5 class="card-title">Cllasic Almari Gold Motif Lukisan</h5>
+                        <p class="card-text">Rp 23.800.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>300 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>55 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>280 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Almari7.jpg" class="card-img-top" alt="almari">
+                    <div class="card-body">
+                        <h5 class="card-title">Almari Cllasic Lengkung 6 Pintu</h5>
+                        <p class="card-text">Rp 14.000.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>300 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>55 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>20 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="Almari8.jpg" class="card-img-top" alt="almari">
+                    <div class="card-body">
+                        <h5 class="card-title">Almari Duco Classic Ukir Pintu 6</h5>
+                        <p class="card-text">Rp 9.000.000</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">P<br><span>300 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">L<br><span>55 cm</span></div>
+                            <div class="text-center m-1 p-2 bg-dark text-white" style="width: 50px;">T<br><span>280 cm</span></div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="btn btn-dark mt-3 d-flex justify-content-center">Tanyakan Produk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    <!-- Testimonial Section -->
+<section id="testimonial" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Testimonial</h2>
+        <div class="row">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card testimonial-card">
+                    <img src="path_to_testimonial_image_1.jpg" class="card-img-top" alt="Customer Testimonial 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Ibu Santi Mayroza</h5>
+                        <p class="card-text">From Sumatara</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card testimonial-card">
+                    <img src="path_to_testimonial_image_2.jpg" class="card-img-top" alt="Customer Testimonial 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Ibu Siti Romlah</h5>
+                        <p class="card-text">From Indramayu</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card testimonial-card">
+                    <img src="path_to_testimonial_image_3.jpg" class="card-img-top" alt="Customer Testimonial 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Bapak Ainul Indra</h5>
+                        <p class="card-text">From Lumajang</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card testimonial-card">
+                    <img src="path_to_testimonial_image_4.jpg" class="card-img-top" alt="Customer Testimonial 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Mbak May Roza</h5>
+                        <p class="card-text">From Sumatara</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card testimonial-card">
+                    <img src="path_to_testimonial_image_5.jpg" class="card-img-top" alt="Customer Testimonial 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Mbak May Roza</h5>
+                        <p class="card-text">From Sumatra</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card testimonial-card">
+                    <img src="path_to_testimonial_image_6.jpg" class="card-img-top" alt="Customer Testimonial 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Pak Indra</h5>
+                        <p class="card-text">From Lumajang</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="card testimonial-card">
+                    <img src="path_to_testimonial_image_7.jpg" class="card-img-top" alt="Customer Testimonial 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Ibu Fatimah</h5>
+                        <p class="card-text">From Bogor</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 8 -->
+            <div class="col-md-4 mb-4">
+                <div class="card testimonial-card">
+                    <img src="path_to_testimonial_image_8.jpg" class="card-img-top" alt="Customer Testimonial 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Ibu Dewi</h5>
+                        <p class="card-text">From Palembang</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 9 -->
+            <div class="col-md-4 mb-4">
+                <div class="card testimonial-card">
+                    <img src="path_to_testimonial_image_9.jpg" class="card-img-top" alt="Customer Testimonial 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Pak Kun Maryono</h5>
+                        <p class="card-text">From Malang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">FAQ</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Apakah bisa custom furniture?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Ya, kami menerima pesanan custom sesuai kebutuhan Anda.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Apakah produk memiliki garansi?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Ya, semua produk kami memiliki garansi kualitas selama 3 bulan.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-5" style="background-color: #343a40; color: white;">
+        <div class="container">
+            <h2 class="text-center mb-4" style="font-weight: bold;">Contact Us</h2>
+            <p class="text-center mb-5">Hubungi kami untuk info lebih lanjut dan pemesanan!</p>
+            
+            <div class="row">
+                <!-- Contact Info -->
+                <div class="col-md-6 mb-4">
+                    <div class="contact-info text-center p-4 rounded" style="background-color: #495057;">
+                        <h4>Alamat</h4>
+                        <p>JL.RA.Rukmini Rt12 Rw03 Bawu Kecamatan Batealit Kabupaten Jepara Provinsi Jawa Tengah Indonesia</p>
+                        
+                        <!-- Social Media Icons -->
+                        <h4>Contact Details</h4>
+                        <div class="social-icons mt-3">
+                        <a href="https://api.whatsapp.com/send/?phone=6285786853280&text&type=phone_number&app_absent=0" class="text-white me-3"><i class="fab fa-whatsapp fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            <!-- Right Column for Google Maps -->
+            <div class="col-md-6">
+                <div class="map-responsive">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1981.5926722005058!2d110.72190456460024!3d-6.6238852391547365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7121f1232195a5%3A0xdbbe9e3d9a1e0563!2sToko%20mebel!5e0!3m2!1sid!2sid!4v1730129384086!5m2!1sid!2sid"
+                        width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2024 Dani Galeri Jepara.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

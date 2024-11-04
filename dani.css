@@ -1,0 +1,164 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-image: url('furniture-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 90px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 50px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Product Card Styles */
+.product-card {
+    border: 1px solid #ddd; /* Border style */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow of child elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin-bottom: 20px; /* Space between product cards */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.btn-outline-primary {
+    color: black; /* Text color for outlined button */
+    border-color: black; /* Border color */
+}
+
+.btn-outline-primary:hover {
+    background-color: black; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+
+.text-center h4 {
+    font-weight: bold; 
+    border-bottom: 2px solid #000; 
+    display: inline-block; 
+    padding-bottom: 5px; 
+}
+
+.product-card img {
+    width: 100%; /* Responsive image */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.product-card .card-body {
+    padding: 15px; /* Inner padding */
+}
+
+.product-card .card-title {
+    font-size: 1.25rem; /* Title font size */
+    font-weight: bold; /* Title weight */
+}
+
+.product-card .card-text {
+    font-size: 1rem; /* Description font size */
+    color: #6c757d; /* Subtle color for description */
+}
+
+.testimonial-card {
+    border: 1px solid #ddd; /* Border style */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin-bottom: 20px; /* Space between testimonials */
+}
+
+.testimonial-card img {
+    width: 100%; /* Responsive testimonial image */
+    height: auto; /* Auto height */
+    object-fit: cover; /* Cover the area without distortion */
+    aspect-ratio: 9 / 16; /* Aspect ratio for images */
+}
+
+.testimonial-card .card-body {
+    padding: 15px; /* Inner padding */
+}
+
+footer {
+    background-color: #343a40; /* Footer background */
+    color: white; /* Footer text color */
+    padding: 15px 0; /* Footer padding */
+}
+
+h2 {
+    font-weight: bold; /* Header weight */
+}
+
+section h2 {
+    margin-bottom: 30px; /* Space below section headers */
+}
+
+.list-inline-item .btn {
+    margin: 5px; /* Margin between buttons */
+}
+
+#about img {
+    border-radius: 10px; /* Rounded corners for about section images */
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Responsive header size */
+    }
+
+    header p {
+        font-size: 1.2rem; /* Responsive paragraph size */
+    }
+
+    .product-card img {
+        height: 150px; /* Responsive product image height */
+    }
+
+    .navbar {
+        padding: 10px 0; /* Padding for smaller screens */
+    }
+}
