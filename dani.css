@@ -1,6 +1,8 @@
+/* Styling umum */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f5f5;
+    margin: 0;
 }
 
 html {
@@ -39,7 +41,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
 header h1 {
     font-size: 3.5rem;
     font-weight: bold;
@@ -53,28 +54,28 @@ header p {
     font-weight: bold;
 }
 
-/* Product Card Styles */
+/* Styling untuk Product Card */
 .product-card {
-    border: 1px solid #ddd; /* Border style */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Prevent overflow of child elements */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    margin-bottom: 20px; /* Space between product cards */
-    transition: transform 0.3s; /* Smooth hover effect */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
 }
 
 .product-card:hover {
-    transform: scale(1.05); /* Scale up on hover */
+    transform: scale(1.05);
 }
 
 .btn-outline-primary {
-    color: black; /* Text color for outlined button */
-    border-color: black; /* Border color */
+    color: black;
+    border-color: black;
 }
 
 .btn-outline-primary:hover {
-    background-color: black; /* Background color on hover */
-    color: white; /* Text color on hover */
+    background-color: black;
+    color: white;
 }
 
 .text-center h4 {
@@ -85,80 +86,129 @@ header p {
 }
 
 .product-card img {
-    width: 100%; /* Responsive image */
-    height: 200px; /* Fixed height for images */
-    object-fit: cover; /* Cover the area without distortion */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .product-card .card-body {
-    padding: 15px; /* Inner padding */
+    padding: 15px;
 }
 
 .product-card .card-title {
-    font-size: 1.25rem; /* Title font size */
-    font-weight: bold; /* Title weight */
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 .product-card .card-text {
-    font-size: 1rem; /* Description font size */
-    color: #6c757d; /* Subtle color for description */
+    font-size: 1rem;
+    color: #6c757d;
 }
 
 .testimonial-card {
-    border: 1px solid #ddd; /* Border style */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Prevent overflow */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    margin-bottom: 20px; /* Space between testimonials */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .testimonial-card img {
-    width: 100%; /* Responsive testimonial image */
-    height: auto; /* Auto height */
-    object-fit: cover; /* Cover the area without distortion */
-    aspect-ratio: 9 / 16; /* Aspect ratio for images */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 9 / 16;
 }
 
 .testimonial-card .card-body {
-    padding: 15px; /* Inner padding */
+    padding: 15px;
 }
 
 footer {
-    background-color: #343a40; /* Footer background */
-    color: white; /* Footer text color */
-    padding: 15px 0; /* Footer padding */
+    background-color: #343a40;
+    color: white;
+    padding: 15px 0;
 }
 
 h2 {
-    font-weight: bold; /* Header weight */
+    font-weight: bold;
 }
 
 section h2 {
-    margin-bottom: 30px; /* Space below section headers */
+    margin-bottom: 30px;
 }
 
 .list-inline-item .btn {
-    margin: 5px; /* Margin between buttons */
+    margin: 5px;
 }
 
 #about img {
-    border-radius: 10px; /* Rounded corners for about section images */
+    border-radius: 10px;
 }
 
+/* Media Query untuk perangkat dengan lebar layar maksimum 768px (mobile) */
 @media (max-width: 768px) {
+    /* Mengurangi tinggi header agar lebih cocok di layar kecil */
+    header {
+        padding: 60px 0;
+        height: 60vh;
+    }
+    
+    /* Ukuran font di header */
     header h1 {
-        font-size: 2.5rem; /* Responsive header size */
+        font-size: 2.5rem;
     }
-
+    
     header p {
-        font-size: 1.2rem; /* Responsive paragraph size */
+        font-size: 1.2rem;
     }
 
+    /* Mengurangi ukuran dan posisi tombol WhatsApp */
+    .whatsapp-float {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Mengatur ulang ukuran Product Card */
     .product-card img {
-        height: 150px; /* Responsive product image height */
+        height: 150px;
     }
 
-    .navbar {
-        padding: 10px 0; /* Padding for smaller screens */
+    .product-card .card-title {
+        font-size: 1.1rem;
+    }
+
+    .product-card .card-text {
+        font-size: 0.9rem;
+    }
+
+    /* Testimonial Card */
+    .testimonial-card img {
+        aspect-ratio: auto;
+    }
+
+    /* Mengurangi padding pada footer */
+    footer {
+        padding: 10px 0;
+    }
+
+    /* Mengurangi margin pada section heading */
+    section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    /* Styling untuk daftar inline */
+    .list-inline-item .btn {
+        margin: 3px;
+    }
+
+    /* Styling untuk gambar di about section */
+    #about img {
+        width: 100%;
+        margin-top: 10px;
     }
 }
+
