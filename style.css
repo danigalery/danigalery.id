@@ -91,7 +91,7 @@ body {
 /* Hanya Background untuk Halaman Awal (Home Section) */
 #home {
   min-height: 100vh;
-  background: url('furniture-bg.jpg') no-repeat center center fixed;
+  background: url('furniture-bg.jpg');
   background-size: cover;
 }
 
