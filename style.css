@@ -91,7 +91,7 @@ body {
 /* Hanya Background untuk Halaman Awal (Home Section) */
 #home {
   min-height: 100vh;
-  background: url('furniture-bg.jpg');
+  background: url('furniture-bg.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -309,8 +309,9 @@ body {
   }
 
   #home {
-    background: url('furniture-bg.jpg')
-    background-size: cover;
+    background-attachment: scroll; /* Menghilangkan efek fixed pada background di mobile */
+    background-size: auto 100%; /* Memastikan gambar latar belakang tidak terdistorsi, dengan tinggi gambar yang 100% */
+    background-position: center center; /* Menjaga posisi gambar tetap di tengah */
   }
 
   #home .brand-logo {
