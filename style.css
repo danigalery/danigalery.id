@@ -113,7 +113,6 @@ body {
   justify-content: center; /* Elemen dipusatkan secara vertikal */
   align-items: flex-start; /* Teks diatur ke kiri */
   padding: 50px; /* Memberi ruang di sekitar teks */
-  background: rgba(33, 34, 37, 0.8); /* Warna latar belakang */
   color: white; /* Warna teks */
   margin: 0; /* Menghapus margin */
   border-radius: 0; /* Tidak ada border radius */
@@ -302,75 +301,39 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsif Best Seller */
+/* Tetap Pertahankan Layout & Font untuk Mobile */
 @media (max-width: 768px) {
-  .best-seller {
-    padding: 1rem 0.5rem;
-  }
-  .best-seller-title {
-    font-size: 1.5rem;
-  }
-  .product-card {
-    flex: 0 0 150px;
-    padding: 0.75rem;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Background dan Header */
-  #home {
-    background-attachment: scroll; /* Menghindari background fixed di mobile */
-    padding: 0 10px; /* Memberikan padding untuk tampilan mobile */
-  }
-
+  /* Header */
   #home header {
-    align-items: center; /* Memusatkan elemen di layar kecil */
-    padding: 20px;
-    text-align: center; /* Menyesuaikan teks agar berada di tengah */
-  }
-
-  #home p {
-    font-size: 1.2rem; /* Mengurangi ukuran teks untuk layar kecil */
-    line-height: 1.5;
+    padding: 15px;
   }
 
   #home .brand-logo {
-    font-size: 2rem;
-    white-space: normal; /* Agar teks logo bisa wrap */
+    font-family: Tahoma, Geneva;
+    font-size: 2.3rem; /* Font sedikit lebih kecil tetapi tetap Tahoma */
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   #home .slogan {
+    font-family: Tahoma, Geneva;
     font-size: 0.9rem;
   }
 
+  /* Whatsapp Button */
   .whatsapp-button {
     font-size: 0.9rem;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
   }
 
   /* Best Seller Section */
-  .best-seller {
-    padding: 1rem 0.5rem;
-  }
-
-  .best-seller-title {
-    font-size: 1.5rem;
-  }
-
   .best-seller-container {
     flex-direction: row;
-    overflow-x: scroll;
-    padding-bottom: 0.5rem;
+    overflow-x: auto;
   }
 
   .product-card {
-    flex: 0 0 150px; /* Ukuran kartu produk lebih kecil */
-    padding: 0.75rem;
-  }
-
-  .product-image {
-    height: 120px; /* Memberikan batasan tinggi agar rapi */
-    object-fit: cover; /* Menyesuaikan gambar agar tetap proporsional */
+    flex: 0 0 160px; /* Ukuran card tetap proporsional */
   }
 
   .product-name {
@@ -378,10 +341,9 @@ body {
   }
 
   .product-price {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
-
 
 /* Section About */
 .about-container {
