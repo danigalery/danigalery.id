@@ -308,6 +308,11 @@ body {
     padding: 15px;
   }
 
+  #home {
+    background: url('furniture-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
   #home .brand-logo {
     font-family: Tahoma, Geneva;
     font-size: 2.3rem; /* Font sedikit lebih kecil tetapi tetap Tahoma */
